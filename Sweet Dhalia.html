@@ -1,0 +1,301 @@
+<html lang="en">
+<meta charset="UTF-8">
+<title>Sweet Dhalia</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+
+.button {
+  background-color: #c8aed1;
+  border: 1px;
+  border-radius: 24px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #6d457a;
+  color: white;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+</style>
+<script src=""></script>
+
+<body>
+
+<div class="w3-bar w3-border w3-card-4 w3-padding-small w3-serif" style="background-color:#c8aed1;">
+  <a href="#" class="w3-bar-item w3-button w3-hover-white w3-text-black w3-right w3-mobile">cart</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-white w3-text-black w3-right w3-mobile">Gallery</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-white w3-text-black w3-right w3-mobile">Menu</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-white w3-text-black w3-right w3-mobile">About us</a>
+</div>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://cdn.theculturetrip.com/wp-content/uploads/2021/12/c419pr_--prisma-by-dukas-presseagentur-gmbh-alamy-stock-photo.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.pinimg.com/originals/14/2e/95/142e95cbcc390f943d95e3b297d8d666.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.thespruceeats.com/thmb/gI_31Soaslcnw-_C5Q5PtyvxiyQ=/3842x2161/smart/filters:no_upscale()/pastry-puffs-with-nutella-filling-1446560-hero-01-6dd04190e7e54bf3b6517da7665ad544.jpg" style="width:100%">
+     <div class="w3-center w3-display-bottommiddle" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+
+	</div>
+  
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT US</span></h5>
+    <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+    <div class="w3-panel w3-leftbar w3-padding-24" style="background-color:#c8aed1;>
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+	  <p>
+    </div>
+    <img src="https://www.frenchtoday.com/assets/2016/09/french-pastrie-vocabulary.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+  </div>
+</div>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+  <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">MENU</span></h5>
+    <div class="w3-quarter">
+      <img src="https://www.whats4eats.com/files/course-desserts-macarons-flickr-68711844%40N07-Michael-Stern-15204286153-4x3.jpg" alt="Macaron" style="width:100%">
+      <h3>Macaron</h3>
+      <p>Macaron description</p>
+				<!-- Trigger/Open the Modal -->
+				<button onclick="document.getElementById('id01').style.display='block'"
+				class="button">Add</button>
+
+				<!-- The Modal -->
+				<div id="id01" class="w3-modal">
+				<div class="w3-modal-content w3-animate-zoom">
+				<div class="w3-container">
+				<span onclick="document.getElementById('id01').style.display='none'"
+				class="w3-button w3-display-topright">&times;</span>
+				Chocolate<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Rose<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Strawberry<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Vanilla<button class="w3-button w3-circle w3-border-black">+</button>
+				</div>
+				</div>
+			</div>
+    </div>
+
+		
+    <div class="w3-quarter">
+      <img src="https://static.toiimg.com/photo/64463630.cms" alt="Cakes" style="width:100%">
+      <h3>Cakes</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+		<!-- Trigger/Open the Modal -->
+<button onclick="document.getElementById('id02').style.display='block'"
+class="button">Add</button>
+
+<!-- The Modal -->
+<div id="id02" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id02').style.display='none'"
+      class="w3-button w3-display-topright">&times;</span>
+      Chocolate<button class="w3-button w3-circle w3-border-black">+</button>
+		<p>Mango<button class="w3-button w3-circle w3-border-black">+</button>
+		<p>Cheesecake<button class="w3-button w3-circle w3-border-black">+</button>
+		<p>Vanilla<button class="w3-button w3-circle w3-border-black">+</button>
+    </div>
+  </div>
+</div>
+    </div>
+	
+    <div class="w3-quarter">
+      <img src="https://www.seriouseats.com/thmb/BxFJTaQJG_liKJ-Ueg2Qnv_D_OA=/1500x1125/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2021__02__20210217-choux-au-craquelinRAW-debbie-wee-b37f4e2fb82546fb92726c50fd32f01a.jpg" alt="Choux" style="width:100%">
+      <h3>Choux pastries</h3>
+      <p>Many types of choux</p>
+      <!-- Trigger/Open the Modal -->
+				<button onclick="document.getElementById('id03').style.display='block'"
+				class="button">Add</button>
+
+				<!-- The Modal -->
+				<div id="id03" class="w3-modal">
+				<div class="w3-modal-content w3-animate-zoom">
+				<div class="w3-container">
+				<span onclick="document.getElementById('id03').style.display='none'"
+				class="w3-button w3-display-topright">&times;</span>
+				Cream puff<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Eclair<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Mini Croquembouche<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Gougère<button class="w3-button w3-circle w3-border-black">+</button>
+				</div>
+				</div>
+			</div>
+    </div>
+  </div>
+  
+    <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="https://www.sidechef.com/recipe/3d5153a5-cbfd-461f-b499-6c278a2c2b73.jpg?d=1408x1120" alt="Blitz Pastries" style="width:100%">
+      <h3>Blitz</h3>
+      <p>Savory and Scrumptious</p>
+	  				<button onclick="document.getElementById('id04').style.display='block'"
+				class="button">Add</button>
+
+				<!-- The Modal -->
+				<div id="id04" class="w3-modal">
+				<div class="w3-modal-content w3-animate-zoom">
+				<div class="w3-container">
+				<span onclick="document.getElementById('id04').style.display='none'"
+				class="w3-button w3-display-topright">&times;</span>
+				Sausage rolls<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Beef Pie<button class="w3-button w3-circle w3-border-black">+</button>
+				</div>
+				</div>
+			</div>
+	  
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.saveur.com/uploads/2019/11/18/U5CWL2CXTVHXZIGW6ZLSCRF37M.jpg?auto=webp" alt="Tarts" style="width:100%">
+      <h3>Tarts</h3>
+      <p>Simple</p>
+	       <!-- Trigger/Open the Modal -->
+				<button onclick="document.getElementById('id05').style.display='block'"
+				class="button">Add</button>
+
+				<!-- The Modal -->
+				<div id="id05" class="w3-modal">
+				<div class="w3-modal-content w3-animate-zoom">
+				<div class="w3-container">
+				<span onclick="document.getElementById('id05').style.display='none'"
+				class="w3-button w3-display-topright">&times;</span>
+				Egg Tart<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Cheese Tart<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Pavlova<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Chocolate<button class="w3-button w3-circle w3-border-black">+</button>
+				</div>
+				</div>
+			</div>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://i0.wp.com/eatwhattonight.com/wp-content/uploads/2017/03/Tuna-Puff-Pastry_1.jpg" alt="Puff Pastries" style="width:100%">
+      <h3>Puff Pastries</h3>
+      <p>A Real Classic</p>
+	   <!-- Trigger/Open the Modal -->
+				<button onclick="document.getElementById('id06').style.display='block'"
+				class="button">Add</button>
+
+				<!-- The Modal -->
+				<div id="id06" class="w3-modal">
+				<div class="w3-modal-content w3-animate-zoom">
+				<div class="w3-container">
+				<span onclick="document.getElementById('id06').style.display='none'"
+				class="w3-button w3-display-topright">&times;</span>
+				Croissant<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Cinnamon Rolls<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Palmiers<button class="w3-button w3-circle w3-border-black">+</button>
+				<p>Curry puffs<button class="w3-button w3-circle w3-border-black">+</button>
+				</div>
+				</div>
+			</div>
+    </div>
+  </div>
+
+</body>
+</html>
